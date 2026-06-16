@@ -1,0 +1,25 @@
+{
+  "name": "pulseai",
+  "version": "0.1.0",
+  "description": "AI-powered news discovery platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run dev\"",
+    "build": "concurrently \"cd frontend && npm run build\" \"cd backend && npm run build\"",
+    "start": "concurrently \"cd frontend && npm start\" \"cd backend && npm start\"",
+    "lint": "concurrently \"cd frontend && npm run lint\" \"cd backend && npm run lint\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "ai",
+    "news",
+    "aggregation",
+    "trending",
+    "personalization"
+  ],
+  "author": "taysports048-beep",
+  "license": "MIT"
+}

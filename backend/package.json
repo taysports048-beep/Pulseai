@@ -1,0 +1,36 @@
+{
+  "name": "pulseai-backend",
+  "version": "0.1.0",
+  "description": "PulseAI backend API and services",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src/**/*.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "@supabase/supabase-js": "^2.38.4",
+    "axios": "^1.6.5",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^7.1.0",
+    "rate-limit": "^4.5.1",
+    "express-rate-limit": "^7.1.5",
+    "joi": "^17.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "nodemon": "^3.0.2",
+    "eslint": "^8.55.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0"
+  }
+}

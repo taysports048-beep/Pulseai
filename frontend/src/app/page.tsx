@@ -35,37 +35,37 @@ const HomePage = () => {
     }
   };
 
+  const categories = ['All', 'Technology', 'Sports', 'Finance', 'Entertainment', 'Science'];
+
   return (
     <div className="flex">
       <Sidebar />
       <div className="flex-1 p-4 md:p-6 lg:p-8">
         {/* Hero Section */}
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+        <div className="mb-8 animate-fadeIn">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-2 hover:text-primary-400 transition-colors duration-300">
             Your Personalized News Feed
           </h1>
-          <p className="text-dark-400 text-lg">
+          <p className="text-dark-400 text-lg hover:text-dark-300 transition-colors duration-300">
             Discover stories that matter to you, powered by AI
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="mb-8 flex gap-2 overflow-x-auto pb-2">
-          {['All', 'Technology', 'Sports', 'Finance', 'Entertainment', 'Science'].map(
-            (category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category.toLowerCase())}
-                className={`px-4 py-2 rounded-full font-medium transition-colors whitespace-nowrap ${
-                  selectedCategory === category.toLowerCase()
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-dark-800 text-dark-300 hover:bg-dark-700'
-                }`}
-              >
-                {category}
-              </button>
-            )
-          )}
+        <div className="mb-8 flex gap-2 overflow-x-auto pb-2 scroll-smooth">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category.toLowerCase())}
+              className={`btn-category ${
+                selectedCategory === category.toLowerCase()
+                  ? 'btn-category-active'
+                  : 'btn-category-inactive'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
 
         {/* Articles Grid */}

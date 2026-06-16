@@ -37,12 +37,14 @@ const TrendingPage = () => {
       <Sidebar />
       <div className="flex-1 p-4 md:p-6 lg:p-8">
         {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-2">
-            <TrendingUp className="text-primary-500" size={32} />
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Trending Now</h1>
+        <div className="mb-8 animate-fadeIn">
+          <div className="flex items-center gap-3 mb-2 group">
+            <TrendingUp className="text-primary-500 group-hover:animate-bounce" size={32} />
+            <h1 className="text-4xl md:text-5xl font-bold text-white group-hover:text-primary-400 transition-colors duration-300">
+              Trending Now
+            </h1>
           </div>
-          <p className="text-dark-400 text-lg">
+          <p className="text-dark-400 text-lg hover:text-dark-300 transition-colors duration-300">
             Discover the hottest topics and stories taking over the internet
           </p>
         </div>
@@ -55,11 +57,11 @@ const TrendingPage = () => {
             ))}
           </div>
         ) : trendingTopics.length === 0 ? (
-          <div className="flex items-center justify-center py-12">
+          <div className="flex items-center justify-center py-12 animate-fadeIn">
             <p className="text-dark-400 text-center">No trending topics at the moment</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fadeIn">
             {trendingTopics.map((topic, index) => (
               <TrendingCard key={topic.id} topic={topic} rank={index + 1} />
             ))}
